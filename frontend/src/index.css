@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Remove max-width constraint that's causing vertical scrollbars */
+section {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Fix for potential overflow issues in flex containers */
+.flex {
+  max-width: 100%;
+}
+
+/* Ensure images don't cause overflow */
+img {
+  max-width: 100%;
+}
+
+/* Prevent scrollbars on all components */
+#root, 
+.min-h-screen,
+.max-w-7xl,
+.container,
+.relative,
+.absolute {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+/* Calendar customization */
+.react-calendar {
+  width: 100% !important;
+  border: none !important;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  font-family: inherit;
+}
+
+.react-calendar__tile--active {
+  background: #2563eb !important;
+  color: white !important;
+}
+
+.react-calendar__tile--now {
+  background: #dbeafe !important;
+  color: #1e40af !important;
+}
+
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  background-color: #bfdbfe !important;
+}
+
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  background-color: #dbeafe !important;
+}
+
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+  background: #1d4ed8 !important;
+}
+
+.react-calendar__navigation {
+  margin-bottom: 0.5rem;
+}
+
+.react-calendar__navigation button {
+  min-width: 44px;
+  background: none;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+.react-calendar__month-view__weekdays {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  padding: 0.5rem;
+}
+
+.react-calendar__month-view__weekdays__weekday abbr {
+  text-decoration: none;
+}
+
+.react-calendar__tile {
+  max-width: 100%;
+  padding: 0.75rem 0.5rem;
+  background: none;
+  text-align: center;
+  line-height: 16px;
+  font-size: 0.875rem;
+}
+
+.react-calendar__tile:disabled {
+  background-color: #f3f4f6;
+  color: #9ca3af;
+}
+
+.calendar-container {
+  padding: 0.5rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure the ScanUpload section does not overflow */
+#scan-upload {
+  overflow: hidden;
+  overflow-y: hidden;
+}
+
+/* Prevent overflow in the upload container */
+.upload-container {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Ensure the preview image does not cause overflow */
+.preview-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Additional styles to prevent overflow in flex containers */
+.flex-container {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Ensure the file input does not cause overflow */
+.file-input {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Prevent overflow in the grid container */
+.grid-container {
+  max-width: 100%;
+  overflow: hidden;
+}
